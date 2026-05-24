@@ -1,0 +1,118 @@
+
+@media (max-width:900px){
+
+    body{
+        padding:0 14px;
+    }
+
+    header{
+        padding-top:24px;
+        margin-bottom:28px;
+    }
+
+    bento-grid{
+        grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+        gap:16px;
+    }
+
+    widget-card{
+        min-height:165px;
+        border-radius:22px;
+    }
+
+    widget-card a{
+        padding:16px;
+    }
+
+    widget-icon{
+        width:46px;
+        height:46px;
+        border-radius:14px;
+    }
+
+    widget-meta{
+        margin-top:14px;
+    }
+
+    widget-meta div:first-child{
+        font-size:13px;
+    }
+
+    widget-meta div:last-child{
+        font-size:11px;
+    }
+}
+
+
+/* ===== MODERN BORDER EFFECT ===== */
+
+.folder-section{
+    position: relative !important;
+    border-radius: 24px !important;
+    border: 1px solid rgba(255,255,255,.15) !important;
+    overflow: hidden !important;
+    background: rgba(20,20,20,.42) !important;
+    backdrop-filter: blur(18px) !important;
+
+    box-shadow:
+    0 0 0 1px rgba(255,255,255,.05),
+    0 0 18px rgba(255,255,255,.08),
+    0 10px 30px rgba(0,0,0,.35) !important;
+
+    transition: all .25s ease !important;
+}
+
+.folder-section::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 1px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,.45),
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.25)
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+    pointer-events: none;
+}
+
+.folder-section:hover{
+    transform: translateY(-4px) !important;
+
+    box-shadow:
+    0 0 22px rgba(255,255,255,.14),
+    0 0 40px rgba(255,255,255,.08),
+    0 18px 45px rgba(0,0,0,.45) !important;
+}
+
+/* COLOR BORDER */
+
+.folder-section:nth-child(1){
+    box-shadow: 0 0 20px rgba(255,215,0,.22) !important;
+}
+
+.folder-section:nth-child(2){
+    box-shadow: 0 0 20px rgba(0,255,120,.22) !important;
+}
+
+.folder-section:nth-child(3){
+    box-shadow: 0 0 20px rgba(180,0,255,.22) !important;
+}
+
+.folder-section:nth-child(4){
+    box-shadow: 0 0 20px rgba(255,120,0,.22) !important;
+}
+
+.folder-section:nth-child(5){
+    box-shadow: 0 0 20px rgba(0,255,255,.22) !important;
+}
